@@ -1,0 +1,8 @@
+# node
+node_modules/
+
+# yarn
+yarn-error.log
+
+# 11ty
+/public/
