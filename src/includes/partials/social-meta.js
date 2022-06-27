@@ -1,8 +1,6 @@
 export default function(config) {
-    config.addJavaScriptFunction('_socialMeta', function(data) {
-        const locale = data.locale || data.site.defaultLocale
-        const l10n = data.site[locale]
-
+    config.addJavaScriptFunction('socialMeta', function(data) {
+        const l10n = this._l10n(data)
         const siteTitle = l10n.title || data.pkg.name
         const separator = l10n.separator || ' | '
         const title = data.title ? siteTitle + separator + data.title : siteTitle

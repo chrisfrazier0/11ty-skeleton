@@ -2,11 +2,16 @@ export const data = {
     layout: 'base',
 }
 
-export const render = data => /* html */ `
-    <header>
-        <h1>${data.title}</h1>
-    </header>
-    <main>
-        ${data.content}
-    </main>
-`
+export function render(data) {
+    const l10n = this._l10n(data)
+
+    return /* html */ `
+        <header>
+            <h1><a href="/">${l10n.title || data.pkg.name}</a></h1>
+            <h2>${data.title}</h2>
+        </header>
+        <main>
+            ${data.content}
+        </main>
+    `
+}

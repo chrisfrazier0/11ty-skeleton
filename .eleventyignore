@@ -2,7 +2,7 @@
 **/README.md
 
 # CSS partials for main style.css
-src/css/partials/
+/src/css/partials/
 
 # ----------------------------------------------------------------
 # when you register a custom '.js' extension, you have to exclude

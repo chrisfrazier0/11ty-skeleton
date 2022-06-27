@@ -3,22 +3,21 @@ export const data = {
 }
 
 export function render(data) {
-    const locale = data.locale || data.site.defaultLocale
-    const l10n = data.site[locale]
-
+    const l10n = this._l10n(data)
+    const author = this._author(data)
     const posts = data.collections.posts || []
     const latestEn = posts.filter(post => post.data.locale === 'en').slice(-2).reverse()
 
     return /* html */ `
         <header>
-            <h1>${data.title || l10n.title || data.pkg.name}</h1>
+            <h1><a href="/">${data.title || l10n.title || data.pkg.name}</a></h1>
         </header>
         <main>
             ${data.content}
         </main>
         <section class="post-list">
-            <h2>${l10n.latestPosts}</h2>
-            ${this.postList(latestEn, data.owner.name.full)}
+            <h3>${l10n.latestPosts}</h3>
+            ${this.postList(latestEn, author)}
         </section>
     `
 }

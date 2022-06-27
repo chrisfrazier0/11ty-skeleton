@@ -1,7 +1,6 @@
 export default function(config) {
-    config.addJavaScriptFunction('_footer', function(data) {
-        const locale = data.locale || data.site.defaultLocale
-        const l10n = data.site[locale]
+    config.addJavaScriptFunction('footer', function(data) {
+        const l10n = this._l10n(data)
 
         return /* html */ `
             <footer>

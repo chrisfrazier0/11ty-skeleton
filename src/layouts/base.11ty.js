@@ -3,16 +3,16 @@ export const data = {
 }
 
 export function render(data) {
-    const locale = data.locale || data.site.defaultLocale
+    const locale = this._locale(data)
 
     return /* html */ `
         <!DOCTYPE html>
         <html lang="${locale}">
-        ${this._headTag(data)}
+        ${this.headTag(data)}
         <body>
             ${data.content}
-            ${this._footer(data)}
-            ${this._scriptTags(data)}
+            ${this.footer(data)}
+            ${this.scriptTags(data)}
         </body>
         </html>
     `

@@ -10,7 +10,7 @@ export default function(config) {
     /* Copy static assets to the output directory */
     config.copyExtension('css')
     config.copyExtension('js')
-    config.addPassthroughCopy('src/img')
+    config.addPassthroughCopy('./src/img')
 
     /* Have Eleventy watch the following additional files for live browsersync */
     config.addWatchTarget('**/*.css')

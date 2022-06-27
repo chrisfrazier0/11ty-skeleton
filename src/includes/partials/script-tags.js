@@ -1,5 +1,5 @@
 export default function(config) {
-    config.addJavaScriptFunction('_scriptTags', function(data) {
+    config.addJavaScriptFunction('scriptTags', function(data) {
         const js = data.js || []
         const modules = data.modules || []
         const scripts = [].concat(js).map(file => `<script src="/js/${file}"></script>`).join('')
