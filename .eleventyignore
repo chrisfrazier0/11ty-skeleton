@@ -1,1 +1,11 @@
-./**/README.md
+# exclude all README files
+**/README.md
+
+# CSS partials for main style.css
+src/css/partials/
+
+# ----------------------------------------------------------------
+# when you register a custom '.js' extension, you have to exclude
+# '.11tydata.js' files from being processed as templates
+# ----------------------------------------------------------------
+**/*.11tydata.js

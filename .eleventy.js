@@ -8,9 +8,9 @@ export default function(config) {
     config.setDataDeepMerge(true)
 
     /* Copy static assets to the output directory */
-    config.addPassthroughCopy('src/css/*.css')
+    config.copyExtension('css')
+    config.copyExtension('js')
     config.addPassthroughCopy('src/img')
-    config.addPassthroughCopy('src/js')
 
     /* Have Eleventy watch the following additional files for live browsersync */
     config.addWatchTarget('**/*.css')
