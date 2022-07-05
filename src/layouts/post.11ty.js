@@ -10,6 +10,7 @@ export function render(data) {
         <header>
             <h1><a href="/">${l10n.title || data.pkg.name}</a></h1>
         </header>
+        ${this.nav(data)}
         <article>
             <header>
                 <h2>${data.title}</h2>

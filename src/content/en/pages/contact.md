@@ -1,5 +1,7 @@
 ---
 title: Contact
+tags: ['nav']
+weight: 3
 css: ['forms.css']
 ---
 

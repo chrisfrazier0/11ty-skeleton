@@ -1,6 +1,6 @@
 ---
 title: GitHub
 tags: ['nav']
-weight: 1
+weight: 4
 url: 'https://github.com/chrisfrazier0'
 ---

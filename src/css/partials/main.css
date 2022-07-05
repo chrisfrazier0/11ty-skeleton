@@ -20,3 +20,31 @@ a, a:hover, a:active, a:visited {
     color: var(--accent);
     text-decoration: none;
 }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+nav ul li a,
+nav ul li a:visited {
+    display: inline-block;
+    color: var(--text);
+}
+
+nav ul li a[aria-current="page"],
+nav ul li a[aria-current="page"]:visited {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: var(--accent);
+}

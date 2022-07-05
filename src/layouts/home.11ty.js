@@ -12,6 +12,7 @@ export function render(data) {
         <header>
             <h1><a href="/">${data.title || l10n.title || data.pkg.name}</a></h1>
         </header>
+        ${this.nav(data)}
         <main>
             ${data.content}
         </main>
