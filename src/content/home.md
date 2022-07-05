@@ -2,6 +2,7 @@
 locale: en
 layout: home
 permalink: /
+tags: ['pages']
 js: 'script.js'
 ---
 

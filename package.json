@@ -20,13 +20,12 @@
     ":clean-all": "rimraf public .husky/_ node_modules",
     ":pristine": "npm-run-all :husky-uninstall :clean-all",
     ":lint": "eslint --no-error-on-unmatched-pattern src/**/*.js",
-    ":build-11ty": "cross-env ELEVENTY_ENV=production node -r esm node_modules/.bin/eleventy",
-    ":build-11ty-dev": "cross-env ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy",
-    ":watch-11ty": "cross-env ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy --serve",
+    ":build-11ty": "node -r esm node_modules/.bin/eleventy",
+    ":watch-11ty": "node -r esm node_modules/.bin/eleventy --serve",
     ":debug-11ty": "cross-env ELEVENTY_ENV=development DEBUG=* node -r esm node_modules/.bin/eleventy",
-    ":build": "npm-run-all :clean :lint -p :build-*",
-    ":build-dev": "npm-run-all :clean :lint -p :build-*-dev",
-    ":dev": "npm-run-all :clean -p :watch-*",
+    ":build": "cross-env ELEVENTY_ENV=production npm-run-all :clean :lint -p :build-*",
+    ":dev": "cross-env ELEVENTY_ENV=development npm-run-all :clean :lint -p :build-*",
+    ":watch": "cross-env ELEVENTY_ENV=development npm-run-all :clean -p :watch-*",
     ":debug": "npm-run-all :clean :debug-11ty"
   },
   "devDependencies": {
@@ -42,6 +41,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.1",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "terser": "^5.14.1"
   }
 }
