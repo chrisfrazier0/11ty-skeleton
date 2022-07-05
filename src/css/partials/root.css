@@ -2,16 +2,20 @@
     --sans-font: "Open Sans", Arial, Helvetica, "Helvetica Neue", sans-serif;
     --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     --bg: #FFF;
+    --light: #CCC;
     --text: #5F5F5F;
     --text-accent: #000;
     --accent: #07B4FF;
+    --accent2: #0497D6;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #212121;
+        --light: #555;
         --text: #DCDCDC;
         --text-accent: #FEFEFE;
         --accent: #FB3;
+        --accent2: #f5A505;
     }
 }

@@ -1,0 +1,56 @@
+.contact {
+    width: 400px;
+}
+
+fieldset {
+	margin: 0 0 10px;
+	padding: 0;
+    border: none !important;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    box-sizing: border-box;
+    width: 100%;
+	border: 1px solid var(--light);
+	margin: 0 0 5px;
+	padding: 10px;
+}
+
+.contact input[type="text"]:hover,
+.contact input[type="email"]:hover,
+.contact input[type="tel"]:hover,
+.contact input[type="url"]:hover,
+.contact textarea:hover {
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid var(--text-accent);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+	outline: 0;
+	border: 1px solid var(--text-accent);
+}
+
+.contact textarea {
+	height: 100px;
+    resize: none;
+}
+
+.contact button[type="submit"] {
+	cursor: pointer;
+	border: none;
+	background: var(--accent);
+	color: var(--bg);
+	margin: 0 0 5px;
+	padding: 10px;
+    width: 100%;
+}
+
+.contact button[type="submit"]:hover {
+    transition: background-color 0.3s ease-in-out;
+	background: var(--accent2);
+}
